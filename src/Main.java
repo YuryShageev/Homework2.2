@@ -1,25 +1,23 @@
 public class Main {
     public static void main(String[] args) {
         //Task 6
-        System.out.println("Task 6");
-        var boxer1Weight = 78.2;
-        var boxer2Weight = 82.7;
-        System.out.println("Общий вес двух бойцов: "+ (boxer1Weight+boxer2Weight));
-        System.out.println("Разница в весе двух бойцов: "+ (boxer2Weight-boxer1Weight));
+        var boxer1 = 78.2;
+        var boxer2 = 82.7;
+        System.out.println("первый боксёр " + boxer1);
+        System.out.println("Boxer 2: " + boxer2);
 
-        //Task 7
-        System.out.println("Task 7");
-        System.out.println("Разница в весе двух бойцов (1 method): "+ (boxer2Weight - boxer1Weight));
-        System.out.println("Разница в весе двух бойцов (2 method): "+ (boxer2Weight % boxer1Weight));
+        var wholeWeight = boxer1 + boxer2;
+        System.out.println("Общий вес: "+ wholeWeight);
 
-        //Task 8
-        System.out.println("Task 8");
-        var totalWorkingOurs = 640;
-        var hoursPerDay = 8;
-        var totalEmployees = totalWorkingOurs / hoursPerDay;
-        System.out.println("Всего работников в компании - "+ totalWorkingOurs / hoursPerDay + " человек");
-        totalEmployees = totalEmployees + 94;
-        totalWorkingOurs = totalEmployees * hoursPerDay;
-        System.out.println("Если в компании работает "+ totalEmployees + " человека, то всего "+ totalWorkingOurs + " часа работы может быть поделено между сотрудниками");
+        var boxerDifference = boxer2 % boxer1;
+        System.out.println("Weight difference: " + boxerDifference);
+
+        var totalWorkHour = 640;
+        var oneEmployeeWorkHours = 8;
+        var totalWorkers = totalWorkHour / oneEmployeeWorkHours;
+        System.out.println(totalWorkers);
+
+        var totalHoursForMoreWorkers = (totalWorkers + 94) * oneEmployeeWorkHours;
+        System.out.println("Столько часов нужно поделить между сотрудниками " + totalHoursForMoreWorkers);
     }
 }
